@@ -1,2 +1,8 @@
 # Default ignored files
 /workspace.xml
+/description.html
+/modules.xml
+/misc.xml
+/project-template.xml
+/vcs.xml
+encodings.xml
