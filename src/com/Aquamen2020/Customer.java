@@ -1,12 +1,26 @@
 package com.Aquamen2020;
 
-public class Customer {
+public class Customers
+{
+    public static String name;
+    public int age;
+    public boolean isVIP;
+    private double acumulativeCost;
+    private double availableDiscounts;
 
-    String name;
-    int age;
-    boolean isVIP;
-    double accumulativeCost;
-    double availableDiscounts;
+
+    public static void main(String[] args) {}
+
+    public boolean isVIP(double totalcost)
+    {
+        if(totalcost >= x)
+        {
+            return ture;
+        }
+        else{return false;}
+    }
+
+
 
 
 }
