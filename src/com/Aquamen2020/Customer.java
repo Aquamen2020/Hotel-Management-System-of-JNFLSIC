@@ -1,6 +1,6 @@
 package com.Aquamen2020;
 
-public class Customers
+public class Customer
 {
     public static String name;
     public int age;
@@ -15,7 +15,7 @@ public class Customers
     {
         if(totalcost >= x)
         {
-            return ture;
+            return true;
         }
         else{return false;}
     }

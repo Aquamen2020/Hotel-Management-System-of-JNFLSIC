@@ -1,25 +1,34 @@
 package com.Aquamen2020;
 
+import java.util.ArrayList;
+
 public class Room {
 
+
     int numOfBeds;
-    double price;
     boolean isAvailable;
-    String rank;
     int roomsPerRoom;
-    boolean isComputer;
-    boolean isTelevision;
-    int NumOfBathRooms;
-    boolean isFreeDrinking;
-    boolean is24hoursServ;
     String typeOfRoom;
     boolean isCleaned;
+    ArrayList <Integer> feedbackRoom;
 
-    Room(int numOfBathRooms,double price,int roomsPerRoom,boolean isComputer,boolean isTelevision,int numOfBathRooms,boolean is24hoursServ){}
-    String rank(){}
+    Room(int nob,int roomsPerRoom){
+        numOfBeds = nob;
+        isAvailable = true;
+        roomsPerRoom = roomsPerRoom;
+        isCleaned = true;
+        feedbackRoom = new ArrayList<Integer>();
+        if (nob>=2){
+            typeOfRoom = "Multihuman Room";
+        }
+        else{
+            typeOfRoom = "Single Room";
+        }
+
+    }
     String modifyRank(){}
     void cleanRoom(){}
-    double getPrice(){}
+
 
 
 

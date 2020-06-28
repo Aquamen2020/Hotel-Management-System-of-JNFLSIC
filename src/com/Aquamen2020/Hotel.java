@@ -23,13 +23,13 @@ public class Hotel {
         return AllRooms.size();
     }
 
-    public void checkin (int roomnumber,Customer C ) //缺少 room,customer部分的参数
+    public void checkin (int roomnumber,Customer c ) //缺少 room,customer部分的参数
     {
 
         if (c.isVIP == true)
-        {income = income + ((Rooms.get(3).getprice) * 0.8);} //假设会员打八折
+        {income = income + ((Room.get(3).getprice) * 0.8);} //假设会员打八折
         else
-        {income = income + Rooms.get(3).getprice;}
+        {income = income + Room.get(3).getprice;}
     }
 
     public void checkout (int roomnumber,Customer C, String Rating, String roomfeedback)  //        缺少room,customer部分参数 roombox
@@ -37,9 +37,9 @@ public class Hotel {
 
 
         if (c.isVIP == true)
-        {income = income + ((Rooms.get(3).getprice) * 0.8);} //假设会员打八折
+        {income = income + ((Room.get(3).getprice) * 0.8);} //假设会员打八折
         else
-        {income = income + Rooms.get(3).getprice;}
+        {income = income + Room.get(3).getprice;}
 
         feedbacks.add(rating);
 
