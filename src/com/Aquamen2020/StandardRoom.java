@@ -1,4 +1,8 @@
 package com.Aquamen2020;
+/**
+ * @Author  ${jaydon}
+ * @create ${6.29} ${11:30}
+ */
 
 public class StandardRoom extends Room {
     private int numOfBathroom;// RoomsperRoom deos not include bathroom. Also, the max num for bathroom is 10

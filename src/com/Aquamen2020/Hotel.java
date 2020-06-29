@@ -23,42 +23,47 @@ public class Hotel {
         return AllRooms.size();
     }
 
-    public void checkin (int roomnumber,Customer c ) //缺少 room,customer部分的参数
+    public void checkin (int roomnumber,Customer c )
     {
-
-        if (c.isVIP == true)
-        {income = income + ((AllRooms.get(3).getPrice()) * 0.8);} //假设会员打八折
-        else
-        {income = income + AllRooms.get(3).getPrice();}
+        AllRooms.get(roomnumber).occupied();
     }
+    /**
+     * @Author  ${jaydon}
+     * @create ${6.29} ${11:30}
+     */
 
     public void checkout (int roomnumber,Customer C, int Rating, String roomfeedback, String thingsDestroyed)  //        缺少room,customer部分参数 roombox
     {
 
-
-        if (C.isVIP == true)
-        { income = income + ((AllRooms.get(roomnumber).getPrice()) * 0.8); } //假设会员打八折
-        else
-        {income = income + AllRooms.get(roomnumber).getPrice();}
+        double tempprice=0;
         if (AllRooms.get(roomnumber).destroy(thingsDestroyed)){
             income += 300;
+            tempprice += 300;}
+        if (C.isVIP == true)
+        {
+            tempprice = (AllRooms.get(roomnumber).getPrice()) * C.calAvailableDiscounts();
+            C.checkout(tempprice);
+            income = income + tempprice;
+
         }
-
+        else
+        {
+            tempprice = AllRooms.get(roomnumber).getPrice();
+            income = income + tempprice;
+            C.checkout(tempprice);
+        }
         AllRooms.get(roomnumber).checkout(Rating,thingsDestroyed);
-
     }
 
-    public void reConstracting(String lc, boolean isE,boolean isR)
-    {
-        AllRooms = new ArrayList <Room>();
-        location = lc;
-        isRestrauant = isR;
-        isEntertainment =  isE;
+
+
+    public void reConstracting(Room original,Room newone) {
+
+       AllRooms.remove(original);
+       AllRooms.add(newone);
+
     }
 
     public double getIncome()
-    {
-
-        return income;
-    }
+    { return income; }
 }

@@ -1,4 +1,8 @@
 package com.Aquamen2020;
+/**
+ * @Author  ${jaydon}
+ * @create ${6.29} ${11:30}
+ */
 
 public class LuxuryRoom extends Room{
     private int numOfTelevisions; // the max num is 5

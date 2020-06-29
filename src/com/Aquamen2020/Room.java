@@ -1,4 +1,8 @@
 package com.Aquamen2020;
+/**
+ * @Author  ${jaydon}
+ * @create ${6.29} ${11:30}
+ */
 
 import java.util.ArrayList;
 
@@ -61,6 +65,8 @@ public class Room {
         makeAvailable();
 
     }
+
+
     public double getPrice(){
         return price;
     }
