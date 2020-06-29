@@ -13,7 +13,7 @@ public class Customer
 
     public boolean isVIP(double totalcost)
     {
-        if(totalcost >= x)
+        if(totalcost >= )
         {
             return true;
         }
