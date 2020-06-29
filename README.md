@@ -1,4 +1,92 @@
-# Hotel-Management-System
 
-Jinan Foreign Language School International Center
-AP Computer Science Elective A Group Aquamen
+
+
+
+
+
+
+
+
+
+
+
+Hotel
+Management
+System
+
+
+
+
+
+2020.6.18
+Jinan Foreign Language School 
+International Center
+Year 11 AP
+Elective A
+Group 1
+
+1. Development environment and tools
+2. Description of the project or function-requirements document
+3. Compilation purpose (user characteristics and level)
+5. Modules and relationships
+6. Class or term description
+8. Project progress estimate
+9. Difficulties in estimation (conditions and restrictions)
+10. User Interface and Interaction
+11. Problems and Fix Instructions-Bug Fix Document
+12. Performance Analysis and Optimization
+
+
+
+Development environment and tool
+     
+
+-Undecided
+-Java 8+
+-IDEAJ
+
+
+II. Description of the project
+III . Compilation purpose
+
+We are designing a system that can from the top to the bottom manage the finance, construction, and activity for A Global Hotel Company. The target users will be the common staffs who know the basic computer operation.
+
+This software can efficiently expedite and bolster the connection of hotels of company, reducing the unnecessary cost or enhancing contact among hotels. 
+
+IV. Module and relationship
+
+CentralPannel
+->customer{
+The criteria for isVIP
+     a. Night >= 30 
+         Cost 2999+, 0.89
+                 29999+, 0. 69
+                59999+, 0.59
+    b. Night >=65 
+      5999+  0.79
+      59999+ 0.49
+      100000+  return “Certification”             
+}
+->Hotel
+Method getInfor{
+收益，评价
+增长量低—-build more
+          高— build less
+                  }
+2. Change hotel rating 
+Customer
+-> 1. al<Hotel> favoriteHotels
+    2.  Check + feedback
+3. method consumption{acct+room.price}
+-> room {
+Destroy (String )
+Save in desk}
+HumanResource
+Staff->manager
+Hotel 
+-> customer {
+Get—-
+}
+-> room
+Get
+Room
