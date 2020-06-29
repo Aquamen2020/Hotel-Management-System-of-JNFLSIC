@@ -9,7 +9,7 @@ public class Hotel {
     boolean isRestrauant;
     boolean isEntertainment;
     String rating;
-    ArrayList <String> feedbacks = new ArrayList <String>();
+    ArrayList <ArrayList<Integer>> feedbacks = new ArrayList <ArrayList<Integer>>();
     public Hotel (String lc, boolean isE,boolean isR)
     {
         location = lc;
@@ -27,28 +27,24 @@ public class Hotel {
     {
 
         if (c.isVIP == true)
-        {income = income + ((Room.get(3).getprice) * 0.8);} //假设会员打八折
+        {income = income + ((AllRooms.get(3).getPrice()) * 0.8);} //假设会员打八折
         else
-        {income = income + Room.get(3).getprice;}
+        {income = income + AllRooms.get(3).getPrice();}
     }
 
-    public void checkout (int roomnumber,Customer C, String Rating, String roomfeedback)  //        缺少room,customer部分参数 roombox
+    public void checkout (int roomnumber,Customer C, int Rating, String roomfeedback, String thingsDestroyed)  //        缺少room,customer部分参数 roombox
     {
 
 
-        if (c.isVIP == true)
-        {income = income + ((Room.get(3).getprice) * 0.8);} //假设会员打八折
+        if (C.isVIP == true)
+        { income = income + ((AllRooms.get(roomnumber).getPrice()) * 0.8); } //假设会员打八折
         else
-        {income = income + Room.get(3).getprice;}
+        {income = income + AllRooms.get(roomnumber).getPrice();}
+        if (AllRooms.get(roomnumber).destroy(thingsDestroyed)){
+            income += 300;
+        }
 
-        feedbacks.add(rating);
-
-    }
-
-
-
-    public void changerating (ArrayList <feedback> feedbacks) //缺少衡量的标准，未商议
-    {
+        AllRooms.get(roomnumber).checkout(Rating,thingsDestroyed);
 
     }
 

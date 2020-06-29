@@ -5,12 +5,14 @@ import java.util.ArrayList;
 public class Room {
 
 
-    int numOfBeds;
+    int numOfBeds;// the max num is 10
     boolean isAvailable;
-    int roomsPerRoom;
+    int roomsPerRoom; // the max num is 10
     String typeOfRoom;
     boolean isCleaned;
     ArrayList <Integer> feedbackRoom;
+    String thingsDestoyed;
+    double price;
 
     Room(int nob,int roomsPerRoom){
         numOfBeds = nob;
@@ -24,10 +26,44 @@ public class Room {
         else{
             typeOfRoom = "Single Room";
         }
+        double price = 0;
 
     }
-    String modifyRank(){}
-    void cleanRoom(){}
+    void cleanRoom(){
+      isCleaned = !isCleaned;
+    }
+
+    void feedback(int rate){
+       feedbackRoom.add(rate);
+    }
+
+    boolean destroy(String thingsDestoyed){
+        thingsDestoyed+=thingsDestoyed;
+        return true;// means having destroyedthings
+    }
+
+    boolean fixing(){
+        thingsDestoyed="";
+        return false;// means no destroyedthings.
+    }
+    void makeAvailable(){
+        isAvailable=!isAvailable;
+    }
+    void occupied(){
+        isAvailable = false;
+    }
+
+    public void checkout(int rate,String thingsDestoyed){
+
+        cleanRoom();
+        feedback(rate);
+        destroy(thingsDestoyed);
+        makeAvailable();
+
+    }
+    public double getPrice(){
+        return price;
+    }
 
 
 
