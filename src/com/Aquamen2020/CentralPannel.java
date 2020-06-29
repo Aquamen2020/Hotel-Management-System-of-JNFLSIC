@@ -8,8 +8,8 @@ public class CentralPannel {
 
     CentralPannel(){};
     void modifyRating(){}
-    double calIncome(){}
-    ArrayList<Hotel> compareIncome(){}
+    double calIncome(){;}
+    ArrayList<Hotel> compareIncome(){;}
 
 
 
